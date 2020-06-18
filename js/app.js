@@ -13,7 +13,8 @@ const handleFormSubmit = function(event) {
   event.preventDefault();
   const readingList = document.querySelector("#reading-list");
   const newListItem = document.createElement("li");
-  newListItem.textContent = `${event.target.title.value}, ${event.target.author.value}, ${event.target.category.value}`
+  newListItem.textContent = `${event.target.title.value} by ${event.target.author.value}, ${event.target.category.value}`;
+  newListItem.classList.add("book")
   readingList.append(newListItem);
   resetForm();
 };
@@ -22,7 +23,7 @@ const resetForm = function() {
   document.querySelector('#new-item-form').reset();
 }
 
-const handleDeleteAll = function(event) {
+const handleDeleteAll = function() {
   document.querySelectorAll("li").forEach(book => book.remove());
 };
 

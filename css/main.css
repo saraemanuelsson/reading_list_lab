@@ -1,3 +1,8 @@
 body {
-  font-family: Palatino;
+  background-color: rgb(rgb(214, 251, 253));
+  font-family: monospace;
+  font-size: x-large;
+  font-weight: 500;
+  background-image: url("background.jpg");
+  background-repeat:no-repeat;
 }
